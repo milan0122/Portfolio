@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/mediaqueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,18 +17,27 @@
 </head>
 
 <body>
-    <nav id="desktop-nav">
-        <a href="#" class="logo">Portfolio</a>
-        <div>
-            <ul class="navbar">
+    <header class="header d-flex" id="header">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="logo">
+            <h1><a href="#">Portfolio</a></h1>
+        </div>
+        <nav id="desktop-nav" class="navbar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Experience">Services</a></li>
                 <li><a href="#Projects">Portfolio</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-    <nav id="ham-nav">
+        </nav>
+        <!-- <div class="toogle">
+            <div>__</div>
+            <div>__</div>
+            <div>__</div>
+        </div> -->
+    </header>
+    <!-- <nav id="ham-nav">
         <div class="ham-menu">
             <div class="ham-icon" onclick="toggleMenu()">
                 <span></span>
@@ -37,130 +51,104 @@
                 <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
-    </nav>
-    <section id="profile">
-        <div class="milaninfo">
-            <div class="hello">Hi I am</div>
-            <div class="name">Milan Dangi</div>
-            <div class="about"><span id="element"></span></div>
-            <div class="btn_container">
-                <button class="button1" onclick="window.open('../Gallery/milan_profile.png')">
-                    Download CV
-                </button>
-                <button class="button2" onclick="location.href('./#Contact')">
-                    Contact Me
-                </button>
-                <div id="social_container">
-                    <img src="../Gallery/linkedin-icon-vector-20891455.webp" class="icon1" alt="My LinkedIn"
-                        onclick="location.href='https://www.linkedin.com/'">
-                    <img src="../Gallery/astana-kazakhstan-20-july-2020-github-icon-vector-34243998.webp" class="icon2"
-                        alt="My GitHub Account" onclick="location.href='https://www.github.com/'">
+    </nav> -->
+    <section id="profile" class="home d-flex">
+        <div class="row">
+            <div class="container">
+                <dvi class="content">
+                    <h2>Hi I am </h2>
+                    <h1>Milan Dangi</h1>
+                    <p><span id="element"></span></p>
+                </dvi>
+                <div class="btn_container">
+                    <button class="primary-btn" onclick="window.open('../Gallery/milan_profile.png')">
+                        Download CV
+                    </button>
+                    <button class="primary-btn" onclick="location.href('./#Contact')">
+                        Contact Me
+                    </button>
+                    <!-- <div id="social_container">
+                        <img src="../Gallery/linkedin-icon-vector-20891455.webp" class="icon1" alt="My LinkedIn"
+                            onclick="location.href='https://www.linkedin.com/'">
+                        <img src="../Gallery/astana-kazakhstan-20-july-2020-github-icon-vector-34243998.webp" class="icon2"
+                            alt="My GitHub Account" onclick="location.href='https://www.github.com/'">
+                    </div> -->
                 </div>
             </div>
+
         </div>
-        <div class="section_pic-container">
-            <img src="../Gallery/milan_profile.png" alt="Milan picture" class="profile_image">
+        <div class="row">
+            <div class="profile_img">
+                <img src="../Gallery/milan_profile.png" alt="Milan picture">
+            </div>
         </div>
-        
     </section>
-    
-    <style>
-        /* #profile {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            padding: 20px;
-        }
-    
-        .milaninfo {
-            max-width: 60%;
-        }
-    
-        .section_pic-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-    
-        .profile_image {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    
-        #social_container {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-    
-        .icon1, .icon2 {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-    
-        .icon1:hover, .icon2:hover {
-            transform: scale(1.1);
-        } */
-    </style>
-    
-   
+
     <section id="about" class="about section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>About</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>About</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
+                sit in iste officiis commodi quidem hic quas.</p>
         </div><!-- End Section Title -->
-  
+
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-  
-          <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4">
-              <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-8 content">
-              <h2>UI/UX Designer &amp; Web Developer.</h2>
-              <p class="fst-italic py-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                  </ul>
+
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-4">
+                    <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                  </ul>
+                <div class="col-lg-8 content">
+                    <h2>Machine Learning Enthusiast &amp; Backend Developer.</h2>
+                    <p class="fst-italic py-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore
+                        magna aliqua.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May
+                                        1995</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
+                                    <span>www.example.com</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456
+                                        7890</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York,
+                                        USA</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                    <span>email@example.com</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
+                                    <span>Available</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="py-3">
+                        Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci
+                        omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+                        Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque
+                        neque.
+                    </p>
                 </div>
-              </div>
-              <p class="py-3">
-                Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-              </p>
             </div>
-          </div>
-  
+
         </div>
-  
-      </section><!-- /About Section -->
-        
-        
+
+    </section><!-- /About Section -->
+
+
     </section>
     <section id="Experience">
         <div class="about_content">
@@ -214,23 +202,26 @@
         <div class="e_details_container p_container" id="projectsContainer">
             <div class="about_container container2">
                 <div class="details_container">
-                    <div class="article_container project_item" onclick="location.href='https://github.com/'" onmouseover="showLink(this)" onmouseout="hideLink(this)">
+                    <div class="article_container project_item" onclick="location.href='https://github.com/'"
+                        onmouseover="showLink(this)" onmouseout="hideLink(this)">
                         <img src="../Gallery/project.png" alt="Project 1" class="project_img">
                         <h2 class="e_sub_title project_title">Project 1</h2>
                         <p class="github_link" style="display: none;">GitHub: https://github.com/</p>
                     </div>
                 </div>
-    
+
                 <div class="details_container">
-                    <div class="article_container project_item" onclick="location.href='https://github.com/'" onmouseover="showLink(this)" onmouseout="hideLink(this)">
+                    <div class="article_container project_item" onclick="location.href='https://github.com/'"
+                        onmouseover="showLink(this)" onmouseout="hideLink(this)">
                         <img src="../Gallery/Unknown.png" alt="Project 2" class="project_img">
                         <h2 class="e_sub_title project_title">Project 2</h2>
                         <p class="github_link" style="display: none;">GitHub: https://github.com/</p>
                     </div>
                 </div>
-    
+
                 <div class="details_container">
-                    <div class="article_container project_item" onclick="location.href='https://github.com/'" onmouseover="showLink(this)" onmouseout="hideLink(this)">
+                    <div class="article_container project_item" onclick="location.href='https://github.com/'"
+                        onmouseover="showLink(this)" onmouseout="hideLink(this)">
                         <img src="../Gallery/project2.jpeg" alt="Movie Recommendation System" class="project_img">
                         <h2 class="e_sub_title project_title">Movie Recommendation System</h2>
                         <p class="github_link" style="display: none;">GitHub: https://github.com/</p>
@@ -238,23 +229,23 @@
                 </div>
             </div>
         </div>
-    
+
         <style>
             .details_container {
                 padding: 10px;
             }
-    
+
             .project_item {
                 cursor: pointer;
                 position: relative;
                 text-align: center;
                 transition: transform 0.3s ease;
             }
-    
+
             .project_item:hover {
                 transform: scale(1.05);
             }
-    
+
             .github_link {
                 position: absolute;
                 bottom: 10px;
@@ -266,12 +257,12 @@
                 border-radius: 5px;
                 display: none;
             }
-    
+
             .project_item:hover .github_link {
                 display: block;
             }
         </style>
-    
+
         <script>
             function showLink(element) {
                 const link = element.querySelector('.github_link');
@@ -279,7 +270,7 @@
                     link.style.display = 'block';
                 }
             }
-    
+
             function hideLink(element) {
                 const link = element.querySelector('.github_link');
                 if (link) {
@@ -288,14 +279,16 @@
             }
         </script>
     </section>
-    
+
 
     <section id="Contact">
         <div class="about_content">
             <p class="hello">Contact Me</p>
         </div>
         <div class="contact_form_container">
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdKQeF9xGkI4UzzVNX4qOybmTds8HUx9Y8aXBrVHRTNJvJ1Qw/formResponse" method="POST" target="_blank">
+            <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdKQeF9xGkI4UzzVNX4qOybmTds8HUx9Y8aXBrVHRTNJvJ1Qw/formResponse"
+                method="POST" target="_blank">
                 <div class="form_group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="entry.2005620554" placeholder="Your Name" required>
@@ -306,12 +299,13 @@
                 </div>
                 <div class="form_group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="entry.839337160" placeholder="Your Message" rows="5" required></textarea>
+                    <textarea id="message" name="entry.839337160" placeholder="Your Message" rows="5"
+                        required></textarea>
                 </div>
                 <button type="submit" class="submit_button">Send Message</button>
             </form>
         </div>
-    
+
         <style>
             .contact_form_container {
                 width: 100%;
@@ -322,17 +316,17 @@
                 border-radius: 10px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
-    
+
             .form_group {
                 margin-bottom: 15px;
             }
-    
+
             .form_group label {
                 display: block;
                 margin-bottom: 5px;
                 font-weight: bold;
             }
-    
+
             .form_group input,
             .form_group textarea {
                 width: 100%;
@@ -341,13 +335,13 @@
                 border-radius: 5px;
                 font-size: 16px;
             }
-    
+
             .form_group input:focus,
             .form_group textarea:focus {
                 border-color: #007bff;
                 outline: none;
             }
-    
+
             .submit_button {
                 background-color: #007bff;
                 color: #fff;
@@ -357,13 +351,13 @@
                 cursor: pointer;
                 font-size: 16px;
             }
-    
+
             .submit_button:hover {
                 background-color: #0056b3;
             }
         </style>
     </section>
-    
+
     <!-- <footer>
         <nav>
             <div class="nav_links_container">
@@ -382,10 +376,10 @@
     <script src="../Javascript/main.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Data Analyst, Machine learner'],
-          typeSpeed: 50,
+            strings: ['Data Analyst, Machine learner'],
+            typeSpeed: 50,
         });
-      </script>
+    </script>
 </body>
 
 
